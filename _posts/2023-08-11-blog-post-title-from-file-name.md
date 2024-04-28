@@ -40,7 +40,6 @@ I am completing writing this years from after the CSK 2020. Even though i've for
   <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/0b117b35-0047-452f-93b4-2de3486c89a6.jpg" width="300" height="300">
   <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/75f38e29-baef-4e10-81b6-639d20080466.jpg" width="300" height="300">
   <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/2ec3e55f-8054-4be6-9e5f-8df0999914b3.jpg" width="300" height="300">
-  
 
 
 
