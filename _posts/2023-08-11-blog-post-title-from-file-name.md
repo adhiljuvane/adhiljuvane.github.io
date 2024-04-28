@@ -33,3 +33,17 @@ I learned so much kindness that day. How can people be kind to other people with
 I learned that rather than money, a better place to sleep in, a better job or another city. I think their happiness came from those children that they were spending their time for. What if one student's future changes because of them that will be more than enough. 
 
 I am completing writing this years from after the CSK 2020. Even though i've forgotten many incidents or details that happened there the way the place and the people there made me feel is something i will never forget. This Chennai trip was actually the first thing that made me think, "Hey, maybe I should start writing about this stuff.".
+
+  <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/f6c034ce-7194-44f1-a0dd-806cfff9c087.jpg" width="300" height="300">
+  <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/35e8bffa-0470-4ce8-8186-753038016e82.jpg" width="300" height="300">
+  <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/41b73d76-437a-4aac-ac4f-b75574fbf4bc.jpg" width="300" height="300">
+  <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/0b117b35-0047-452f-93b4-2de3486c89a6.jpg" width="300" height="300">
+  <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/75f38e29-baef-4e10-81b6-639d20080466.jpg" width="300" height="300">
+  <img src="https://github.com/adhiljuvane/adhiljuvane.github.io/assets/22189255/2ec3e55f-8054-4be6-9e5f-8df0999914b3.jpg" width="300" height="300">
+  
+
+
+
+
+
+
