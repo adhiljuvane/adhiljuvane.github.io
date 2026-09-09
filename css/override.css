@@ -1,11 +1,12 @@
-/* Diffident — Medium-style */
+/* Diffident — Medium-style layout */
 
 :root {
   --bg: #ffffff;
   --ink: #242424;
   --muted: #6b6b6b;
   --accent: #1a8917;
-  --hairline: #f2f2f2;
+  --hairline: #e8e8e8;
+  --thumb-bg: #f2f2f2;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --serif: Charter, "Bitstream Charter", Georgia, Cambria, "Times New Roman", serif;
 }
@@ -17,6 +18,7 @@
     --muted: #a8a8a8;
     --accent: #4caf50;
     --hairline: #2f2f2f;
+    --thumb-bg: #242424;
   }
 }
 
@@ -36,9 +38,6 @@ body {
   line-height: 1.6;
   color: var(--ink);
   background: var(--bg);
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 1.25rem 2rem;
 }
 
 a {
@@ -46,85 +45,125 @@ a {
   text-decoration: none;
 }
 
-/* Masthead */
+.wrap {
+  max-width: 1072px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
 
-header {
+/* Masthead — full-width bar */
+
+.masthead {
+  border-bottom: 1px solid var(--hairline);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.masthead .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  padding: 1.25rem 0;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid var(--hairline);
+  gap: 1rem;
+  height: 57px;
 }
 
 .logo {
   font-family: var(--serif);
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  letter-spacing: -0.03em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-header nav {
+.masthead nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1.4rem;
 }
 
-header nav a {
+.masthead nav a {
   color: var(--muted);
   font-size: 0.85rem;
 }
 
-header nav a:hover {
+.masthead nav a:hover {
   color: var(--ink);
 }
 
-/* Intro */
+/* Hero — big Medium-style statement */
 
-#about {
-  margin-bottom: 3.5rem;
-  color: var(--muted);
-  font-size: 1.05rem;
+.hero {
+  border-bottom: 1px solid var(--hairline);
+  padding: 4.5rem 0;
 }
 
-#about p {
-  margin-bottom: 0.9rem;
-}
-
-#about em {
+.hero h1 {
   font-family: var(--serif);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+.hero .epigraph {
+  font-family: var(--serif);
+  font-style: italic;
   color: var(--ink);
+  margin-top: 1rem;
 }
 
-/* Post list */
+/* Feed */
 
-h2 {
-  font-size: 1rem;
-  font-weight: 700;
+.feed {
+  padding: 2.5rem 0 4rem;
+  max-width: 728px;
+}
+
+.feed h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   padding-bottom: 1rem;
-  margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--hairline);
 }
 
-#blog-posts article {
-  padding: 1.75rem 0;
+.story {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.9rem 0;
   border-bottom: 1px solid var(--hairline);
 }
 
-#blog-posts article:last-child {
-  border-bottom: none;
+.story-body {
+  flex: 1;
+  min-width: 0;
 }
 
-article h3 {
-  font-size: 1.35rem;
+.story .kicker {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.story h3 {
+  font-size: 1.3rem;
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.25;
   letter-spacing: -0.01em;
   margin-bottom: 0.35rem;
   overflow: hidden;
@@ -132,57 +171,68 @@ article h3 {
   white-space: nowrap;
 }
 
-article h3 a:hover {
-  color: var(--accent);
-}
-
-#blog-posts article p {
-  color: var(--muted);
-  margin-bottom: 0.6rem;
-}
-
-article time,
-.post-meta {
-  display: block;
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-bottom: 0.75rem;
-}
-
-.read-more {
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.read-more:hover {
+.story h3 a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* Article page */
-
-article h1 {
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-  margin-bottom: 0.6rem;
+.story .excerpt {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-main > article > p {
+.story .post-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.story .thumb {
+  flex-shrink: 0;
+  width: 160px;
+  height: 107px;
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--thumb-bg);
+}
+
+/* Article page */
+
+.post {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.post h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+}
+
+.post .post-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-bottom: 1.75rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.post article > p {
   font-family: var(--serif);
   font-size: 1.25rem;
   line-height: 1.7;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.7rem;
 }
 
-main > article time,
-main > article .post-meta {
-  margin-bottom: 2.25rem;
-}
-
-main > article a {
+.post article a {
   color: var(--accent);
 }
 
@@ -199,44 +249,70 @@ main > article a {
   border-radius: 4px;
 }
 
-main > nav {
+.post nav {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--hairline);
 }
 
-main > nav a {
+.post nav a {
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-main > nav a:hover {
+.post nav a:hover {
   color: var(--ink);
 }
 
 /* Footer */
 
 footer {
-  margin-top: 4rem;
-  padding-top: 1.5rem;
   border-top: 1px solid var(--hairline);
+  padding: 1.75rem 0 2.5rem;
   color: var(--muted);
   font-size: 0.82rem;
-  text-align: center;
+}
+
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
 }
 
 /* Responsive */
 
 @media (max-width: 600px) {
-  header {
-    margin-bottom: 2rem;
+  .masthead nav {
+    gap: 1rem;
   }
 
-  article h1 {
-    font-size: 1.7rem;
+  .masthead nav a {
+    font-size: 0.8rem;
   }
 
-  main > article > p {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .story {
+    gap: 1.25rem;
+  }
+
+  .story .thumb {
+    width: 88px;
+    height: 88px;
+  }
+
+  .story .excerpt {
+    display: none;
+  }
+
+  .post h1 {
+    font-size: 1.85rem;
+  }
+
+  .post article > p {
     font-size: 1.125rem;
   }
 }
